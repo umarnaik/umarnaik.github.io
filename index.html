@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>spismato :)</title> 
+
+        <link href="resize/change.css" rel = "stylesheet" type = "text/css" />
+
+        <link rel="icon" type="image/png" href="./coffee.png"/>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+        </script>
+
+    </head>
+
+   <body>
+
+        <div class="container">
+            <div data-am-fadeshow="next-prev-navigation">
+                <!-- Radio -->
+                <input type="radio" name="css-fadeshow" id="slide-1" onclick="background1 ();" />
+                <input type="radio" name="css-fadeshow" id="slide-2" onclick="background2 ();" />
+                <input type="radio" name="css-fadeshow" id="slide-3" onclick="background3 ();"/>
+                <input type="radio" name="css-fadeshow" id="slide-4" onclick="background4 ();"/>
+                <input type="radio" name="css-fadeshow" id="slide-5" onclick="background5 ();"/>
+
+                
+                <div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+                    <div class="modal-dialog"> 
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLiveLabel">Playlist</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="https://open.spotify.com/embed/playlist/4yZGJPfGVtbzSPHPcCs9RI" width="100%" height="450" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bd-example">
+                    <button type="button" class="btn btn-light" id= "spotifyButton"  data-bs-toggle="modal" data-bs-target="#exampleModalLive">
+                    <img class= "spotify" src="Spotify_Button.png" width= "70" height= "55">
+                    </button>
+
+                <p id="timer">00:00</p>
+
+                <div class="wrapper">
+
+                    <input id="inputTimer" type="text" placeholder="00:00"/>
+                    <button id="startTimer" class="btn btn-outline-light" >Start</button>
+                    <button id="stopTimer" class="btn btn-outline-light" >Stop</button> 
+                
+                </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+
+        var countDownTimer
+
+
+        function startTimer() {
+            //Gets the value in the input field and stores it in the variable userInput
+            var userInput = document.getElementById("inputTimer").value;
+            //Displays this userInput 
+            document.getElementById("timer").innerHTML = userInput;
+            //Get the minute of the userInput by getting the first two values
+            var minutes = userInput.slice(0,2);
+            //Get the seconds of the userInput by gettin the last 2 values
+            var seconds = userInput.slice(-2);
+            //Example:  user inputs 05:00, this is equal to 4 minutes + 60 seconds - you can't count down from 0 
+            if (seconds == 0) {
+                seconds = 60;
+                minutes--;
+            }
+        
+
+            //setInterval calls a function every x milliseconds, in this case it calls a function every 1 second 
+            countDownTimer = setInterval(function(){
+                //decrease seconds by 1, every second
+                seconds--;
+                //if the seconds decrease down to 0 seconds, decrease minutes by 1, and turn seconds to 60 
+                if (seconds == 0) {
+                    //if the seconds is 0 AND the minutes is 0, change the displayed timer to 00:00, and stop the countdown timer 
+                    if (minutes == 0) {
+                        document.getElementById("timer").innerHTML = "00:00";
+                        alert("Break Time (๑•̀ㅂ•́)و✧ Add a break time countdown!");
+                        clearInterval(countDownTimer);
+                        return 
+                    }
+                    minutes--;
+                    seconds = 60;
+                }
+                //updates the displayed timer to reflect changes above every second
+                document.getElementById("timer").innerHTML = minutes + ":" + ('0' + seconds).slice(-2);
+            }, 1000)
+        }
+
+        function stopTimer() {
+            clearInterval(countDownTimer);
+            console.log("hello world");
+
+        }
+        
+        document.getElementById("startTimer").onclick = startTimer
+        document.getElementById("stopTimer").onclick = stopTimer
+
+    });
+
+    </script>
+    
+    <script>
+
+        function background1 () {
+
+        document.body.style.backgroundImage = "url(https://cutewallpaper.org/21/gif-wallpaper-anime/Pin-by-Buu-Dang-on-iPhone-6S-Plus-Wallpapers-Must-to-Have-in-.gif)";
+        document.body.style.backgroundSize =  "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        }
+
+
+        function background2 () {
+
+        document.body.style.backgroundImage = "url(https://i.pinimg.com/originals/9b/4a/19/9b4a1903e6d2c4ada4228f12fcbde201.gif)";
+        document.body.style.backgroundSize =  "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        }
+
+        function background3 () {
+
+        document.body.style.backgroundImage = "url(https://data.whicdn.com/images/313257167/original.gif)";
+        document.body.style.backgroundSize =  "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        }
+
+        function background4 () {
+
+        document.body.style.backgroundImage = "url(https://64.media.tumblr.com/7abccbd1ac5a26b4fdbba7226043caa3/c16615f60c6b5b62-35/s540x810/3d7ba0512f261874d8326825f0bd5ce420a75860.gifv)";
+        document.body.style.backgroundSize =  "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        }
+
+        function background5 () {
+
+        document.body.style.backgroundImage = "url(https://68.media.tumblr.com/e6ea224143f7a0fc5f2f5648e7ea8abe/tumblr_os68iuswWY1uob8tfo1_540.gif)";
+        document.body.style.backgroundSize =  "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        }
+
+
+    </script>
+        
+
+    </body>
+
+</html>

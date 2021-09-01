@@ -1,0 +1,140 @@
+body {
+
+    background-image: url('https://cutewallpaper.org/21/gif-wallpaper-anime/Pin-by-Buu-Dang-on-iPhone-6S-Plus-Wallpapers-Must-to-Have-in-.gif'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px; 
+
+}
+
+#timer {
+
+    color: white;
+    font-family: "Papyrus";
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    top: 10%;
+    left: 44%;
+    padding-bottom: 0px;
+    position: absolute;
+
+}
+
+#inputTimer {
+
+    top: 10%;
+    left: 45%;
+    cursor: pointer;
+    color: white 
+
+}
+
+.startTimer {
+
+    top: 10%;
+    left: 44%;
+    cursor: pointer;
+    margin: 0;
+    z-index: 6;
+
+}
+
+.stopTimer {
+
+    top: 10%;
+    left: 48%;
+    cursor: pointer;
+    margin: 0;
+    z-index: 6;
+
+}
+
+.wrapper {
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px;
+    border-color: white;
+    cursor:pointer;
+    overflow: hidden;
+    text-align: center;
+    top: 20%;
+    left: 39%;
+    position: fixed;
+    z-index: 6;
+}
+
+#inputTimer[type=text] {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+/* Slides */
+.fs-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#spotifyButton {
+
+    position: absolute;
+    bottom: 3%;
+    left: 1%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#slide-1 {
+
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    transform: scale(1.5);
+}
+
+#slide-2 {
+
+    position: absolute;
+    bottom: 5%;
+    left: 47%;
+    transform: scale(1.5);
+
+}
+
+#slide-3 {
+
+    position: absolute;
+    bottom: 5%;
+    left: 49%;
+    transform: scale(1.5);
+
+}
+
+#slide-4 {
+
+    position: absolute;
+    bottom: 5%;
+    left: 51%;
+    transform: scale(1.5);
+
+}
+
+#slide-5 {
+
+    position: absolute;
+    bottom: 5%;
+    left: 53%;
+    transform: scale(1.5);
+
+}
